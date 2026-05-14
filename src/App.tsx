@@ -291,45 +291,86 @@ const App = () => {
 
   // Sidebar Component
   const Sidebar = ({ current }: { current: View }) => (
-    <motion.aside animate={{ width: isSidebarOpen ? 320 : 100 }} className="h-screen bg-[#0a0a0a] border-r border-white/5 flex flex-col relative z-50 overflow-hidden flex-shrink-0">
-      <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="absolute top-8 right-6 w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white/50 hover:bg-red-800 transition-all z-50">
-        {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
-      </button>
-      <div className="flex flex-col h-full p-6 py-8">
-        <button onClick={() => setView('landing')} className={`mb-12 transition-all duration-300 hover:scale-105 active:scale-95 ${isSidebarOpen ? 'opacity-100' : 'opacity-0 w-0'}`}>
-           <div className="bg-red-800 text-white p-2 px-3 rounded-lg font-outfit font-bold text-xl italic tracking-tight inline-block shadow-lg whitespace-nowrap">SmartEat .Space</div>
+    <motion.aside 
+      animate={{ width: isSidebarOpen ? 340 : 88 }} 
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      className="h-screen bg-[#050505] border-r border-white/5 flex flex-col relative z-50 overflow-hidden flex-shrink-0 shadow-2xl"
+    >
+      <div className="h-28 flex items-center justify-center relative">
+        <button 
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)} 
+          className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 ${isSidebarOpen ? 'bg-red-800 text-white rotate-90' : 'bg-white/5 text-white/40 hover:bg-white/10'}`}
+        >
+          {isSidebarOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
+      </div>
+
+      <div className="flex flex-col h-full px-4 pb-12">
+        <div className={`mb-12 flex justify-center transition-all duration-500 ${isSidebarOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-90 h-0 overflow-hidden'}`}>
+           <button onClick={() => setView('landing')} className="bg-red-800 text-white p-3 px-5 rounded-2xl font-outfit font-bold text-xl italic tracking-tighter shadow-xl shadow-red-900/20 whitespace-nowrap">
+             SmartEat .Space
+           </button>
+        </div>
         
-        <nav className="flex-1 space-y-4">
-          <NavItem icon={<Home size={22} />} label={t('sidebarHome')} active={false} isOpen={isSidebarOpen} onClick={() => setView('landing')} />
-          <NavItem icon={<LayoutDashboard size={22} />} label={t('sidebarDash')} active={current === 'dashboard'} isOpen={isSidebarOpen} onClick={() => setView('dashboard')} />
-          <NavItem icon={<Utensils size={22} />} label={t('sidebarMacros')} active={current === 'piano_c'} isOpen={isSidebarOpen} onClick={() => setView('piano_c')} connected />
-          <NavItem icon={<Dumbbell size={22} />} label={t('sidebarWorkouts')} active={current === 'workouts'} isOpen={isSidebarOpen} onClick={() => setView('workouts')} connected />
-          <NavItem icon={<BookOpen size={22} />} label={t('sidebarMagazine')} active={false} isOpen={isSidebarOpen} connected />
-          <NavItem icon={<SettingsIcon size={22} />} label={t('sidebarSettings')} active={current === 'settings'} isOpen={isSidebarOpen} onClick={() => setView('settings')} />
+        <nav className="flex-1 space-y-8">
+          <NavItem icon={<Home size={24} />} label={t('sidebarHome')} active={false} isOpen={isSidebarOpen} onClick={() => setView('landing')} />
+          <NavItem icon={<LayoutDashboard size={24} />} label={t('sidebarDash')} active={current === 'dashboard'} isOpen={isSidebarOpen} onClick={() => setView('dashboard')} />
+          <NavItem icon={<Utensils size={24} />} label={t('sidebarMacros')} active={current === 'piano_c'} isOpen={isSidebarOpen} onClick={() => setView('piano_c')} connected />
+          <NavItem icon={<Dumbbell size={24} />} label={t('sidebarWorkouts')} active={current === 'workouts'} isOpen={isSidebarOpen} onClick={() => setView('workouts')} connected />
+          <NavItem icon={<BookOpen size={24} />} label={t('sidebarMagazine')} active={false} isOpen={isSidebarOpen} connected />
+          <NavItem icon={<SettingsIcon size={24} />} label={t('sidebarSettings')} active={current === 'settings'} isOpen={isSidebarOpen} onClick={() => setView('settings')} />
         </nav>
 
-        {isSidebarOpen && (
-           <div className="flex gap-2 mt-8 p-4 bg-white/5 rounded-2xl border border-white/5">
-              {['it', 'fr', 'en'].map(l => (
-                 <button key={l} onClick={() => setLang(l as Language)} className={`flex-1 py-2 rounded-xl text-[10px] font-bold uppercase transition-all ${lang === l ? 'bg-red-800 text-white' : 'hover:bg-white/10 text-white/30'}`}>{l}</button>
-              ))}
-           </div>
-        )}
+        <div className="space-y-6 pt-8 border-t border-white/5">
+          {isSidebarOpen ? (
+             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex gap-2 p-2 bg-white/5 rounded-2xl">
+                {['it', 'fr', 'en'].map(l => (
+                   <button key={l} onClick={() => setLang(l as Language)} className={`flex-1 py-2 rounded-xl text-[10px] font-bold uppercase transition-all ${lang === l ? 'bg-red-800 text-white shadow-lg' : 'hover:bg-white/10 text-white/20'}`}>{l}</button>
+                ))}
+             </motion.div>
+          ) : (
+            <div className="flex flex-col items-center gap-2">
+               <div className="w-8 h-8 rounded-full bg-red-800/20 flex items-center justify-center text-[10px] font-bold text-red-800 uppercase">{lang}</div>
+            </div>
+          )}
 
-        <button onClick={() => setView('landing')} className={`flex items-center gap-4 text-white/30 font-bold mt-8 ${isSidebarOpen ? 'px-4 hover:text-red-800' : 'justify-center'}`}>
-           <LogOut size={22} /> {isSidebarOpen && <span>{t('sidebarLogout')}</span>}
-        </button>
+          <button onClick={() => setView('landing')} className={`w-full flex items-center transition-all group ${isSidebarOpen ? 'px-6 gap-4 text-white/30 hover:text-red-800' : 'justify-center text-white/20 hover:text-red-800'}`}>
+             <LogOut size={24} className="group-hover:scale-110 transition-transform" /> 
+             {isSidebarOpen && <span className="font-bold text-sm uppercase tracking-widest">{t('sidebarLogout')}</span>}
+          </button>
+        </div>
       </div>
     </motion.aside>
   );
 
   const NavItem = ({ icon, label, active, isOpen, onClick, connected }: any) => (
-    <div className="relative group">
-      {connected && isOpen && <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-blue-600 text-[7px] text-white font-bold px-1.5 py-0.5 rounded uppercase tracking-tighter z-10 shadow-lg">Connected</div>}
-      <button onClick={onClick} className={`w-full p-4 rounded-2xl flex items-center transition-all ${isOpen ? 'justify-start gap-4' : 'justify-center'} ${active ? 'bg-red-800 text-white shadow-xl shadow-red-900/40' : 'border-2 border-dashed border-white/5 text-white/40 hover:border-red-800/40 hover:text-white'}`}>
-        <span className="flex-shrink-0">{icon}</span>
-        {isOpen && <motion.span initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} className="font-outfit font-bold whitespace-nowrap text-sm">{label}</motion.span>}
+    <div className="relative px-2">
+      {connected && isOpen && (
+        <motion.div 
+          initial={{ opacity: 0, y: 5 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-[8px] text-white font-black px-2 py-0.5 rounded-full uppercase tracking-tighter z-10 shadow-lg"
+        >
+          Connected
+        </motion.div>
+      )}
+      <button 
+        onClick={onClick} 
+        className={`w-full h-16 rounded-[24px] flex items-center transition-all duration-300 relative group ${isOpen ? 'px-6 gap-6' : 'justify-center'} ${active ? 'bg-red-800 text-white shadow-2xl shadow-red-900/50' : 'bg-transparent text-white/40 hover:bg-white/5 hover:text-white'}`}
+      >
+        <div className={`flex-shrink-0 transition-transform duration-300 ${active ? 'scale-110' : 'group-hover:scale-110'}`}>
+          {icon}
+        </div>
+        {isOpen && (
+          <motion.span 
+            initial={{ opacity: 0, x: -10 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            className="font-outfit font-bold whitespace-nowrap text-sm tracking-tight"
+          >
+            {label}
+          </motion.span>
+        )}
+        {!isOpen && active && <div className="absolute right-0 w-1.5 h-6 bg-red-800 rounded-l-full" />}
       </button>
     </div>
   );
