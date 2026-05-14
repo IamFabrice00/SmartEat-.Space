@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { 
   ChevronRight, ArrowLeft, Loader2, ShieldCheck, Star, 
   LayoutDashboard, Utensils, Dumbbell, Settings as SettingsIcon, LogOut, Menu, X, Flame, TrendingUp, Zap, Calendar, 
@@ -723,6 +724,7 @@ const App = () => {
            </motion.div>
         )}
       </AnimatePresence>
+      <SpeedInsights />
     </div>
   );
 };
