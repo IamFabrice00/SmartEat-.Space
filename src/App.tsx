@@ -4,7 +4,7 @@ import {
   ChevronRight, ArrowLeft, Loader2, ShieldCheck, Star, 
   LayoutDashboard, Utensils, Dumbbell, Settings as SettingsIcon, LogOut, Menu, X, Flame, TrendingUp, Zap, Calendar, 
   Plus, Search, BookOpen, Pizza, ArrowRight, Home, Sparkles, Brain, Wand2,
-  Leaf, AlertCircle, Coins, UserCircle, Globe, ShieldAlert, FileText, Fingerprint
+  Leaf, AlertCircle, Coins, UserCircle, Globe, ShieldAlert, FileText, Fingerprint, Mail, CheckCircle2
 } from 'lucide-react';
 import { 
   PieChart, Pie, Cell, ResponsiveContainer, 
@@ -82,7 +82,15 @@ const T: Record<Language, Record<string, string>> = {
     cookieMsg: "Usiamo i cookie per migliorare la tua esperienza su SmartEat .Space.",
     accept: "Accetta tutto",
     decline: "Rifiuta",
-    legalIntro: "Ultimo aggiornamento: Maggio 2024. La tua privacy è la nostra priorità."
+    legalIntro: "Ultimo aggiornamento: Maggio 2024. La tua privacy è la nostra priorità.",
+    newsletterBadge: "Newsletter",
+    newsletterTitle: "Rimani nel Flusso",
+    newsletterSub: "Ricevi approfondimenti bio-metrici e strategie nutrizionali avanzate ogni settimana.",
+    newsletterPlaceholder: "la-tua@email.com",
+    newsletterButton: "ISCRIVITI ORA",
+    newsletterSuccess: "Benvenuto a bordo!",
+    newsletterSuccessSub: "Controlla la tua email per confermare l'iscrizione.",
+    newsletterError: "Ops! Qualcosa è andato storto. Riprova."
   },
   fr: {
     heroTitle: "Nourrissez votre Corps, Transformez votre Vie",
@@ -145,7 +153,15 @@ const T: Record<Language, Record<string, string>> = {
     cookieMsg: "Nous utilisons des cookies pour améliorer votre expérience sur SmartEat .Space.",
     accept: "Tout Accepter",
     decline: "Refuser",
-    legalIntro: "Dernière mise à jour : Mai 2024. Votre vie privée est notre priorité."
+    legalIntro: "Dernière mise à jour : Mai 2024. Votre vie privée est notre priorité.",
+    newsletterBadge: "Newsletter",
+    newsletterTitle: "Restez dans le Flux",
+    newsletterSub: "Recevez des informations biométriques et des stratégies nutritionnelles avancées chaque semaine.",
+    newsletterPlaceholder: "votre@email.com",
+    newsletterButton: "S'INSCRIRE",
+    newsletterSuccess: "Bienvenue à bord !",
+    newsletterSuccessSub: "Vérifiez votre email pour confirmer l'inscription.",
+    newsletterError: "Oups ! Quelque chose s'est mal passé. Réessayez."
   },
   en: {
     heroTitle: "Fuel Your Body, Transform Your Life",
@@ -208,7 +224,15 @@ const T: Record<Language, Record<string, string>> = {
     cookieMsg: "We use cookies to enhance your experience on SmartEat .Space.",
     accept: "Accept All",
     decline: "Decline",
-    legalIntro: "Last updated: May 2024. Your privacy is our priority."
+    legalIntro: "Last updated: May 2024. Your privacy is our priority.",
+    newsletterBadge: "Newsletter",
+    newsletterTitle: "Stay in the Flow",
+    newsletterSub: "Get bio-metric insights and advanced nutritional strategies delivered weekly.",
+    newsletterPlaceholder: "your@email.com",
+    newsletterButton: "SUBSCRIBE NOW",
+    newsletterSuccess: "Welcome Aboard!",
+    newsletterSuccessSub: "Check your email to confirm your subscription.",
+    newsletterError: "Oops! Something went wrong. Please try again."
   }
 };
 
@@ -274,6 +298,33 @@ const App = () => {
   
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showCookieBanner, setShowCookieBanner] = useState(() => localStorage.getItem('se_cookies_accepted') !== 'true');
+
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus('loading');
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, language: lang, site_name: 'SmartEat .Space' }),
+      });
+
+      if (!response.ok) throw new Error('Subscription failed');
+
+      setStatus('success');
+      setEmail('');
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (error) {
+      console.error('Newsletter Error:', error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 3000);
+    }
+  };
 
   const results = useMemo(() => calculateCalories(gender, weight, height, age, activity, goal), [gender, weight, height, age, activity, goal]);
 
@@ -461,6 +512,114 @@ const App = () => {
                    ))}
                  </div>
                </div>
+             </section>
+
+             <section className="bg-white py-40 px-8 lg:px-24 relative overflow-hidden">
+                {/* Background Decorative Element */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-800/5 rounded-full blur-[120px] pointer-events-none" />
+                
+                <div className="max-w-5xl mx-auto relative z-10">
+                   <motion.div 
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      className="bg-[#0a0a0a] rounded-[80px] p-12 md:p-24 relative overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] border border-white/5"
+                   >
+                      <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_top_right,rgba(139,0,0,0.15),transparent)] pointer-events-none" />
+                      
+                      <div className="grid lg:grid-cols-2 gap-16 items-center">
+                         <div className="space-y-10 text-left">
+                            <div className="space-y-6">
+                               <div className="inline-flex items-center gap-3 px-4 py-2 bg-red-800/10 border border-red-800/20 rounded-full">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-red-800 animate-pulse" />
+                                  <span className="text-[10px] font-bold text-red-800 uppercase tracking-[0.3em]">{t('newsletterBadge')}</span>
+                               </div>
+                               <h2 className="text-5xl lg:text-7xl font-outfit font-bold text-white leading-[1.1] tracking-tight">
+                                  {t('newsletterTitle').split(' ')[0]} <br />
+                                  <span className="text-red-800 italic">{t('newsletterTitle').split(' ').slice(1).join(' ')}</span>
+                               </h2>
+                               <p className="text-white/40 text-lg leading-relaxed max-w-md">
+                                  {t('newsletterSub')}
+                                </p>
+                            </div>
+
+                            <div className="flex items-center gap-6 text-white/20">
+                               <div className="flex -space-x-3">
+                                  {[1,2,3].map(i => <div key={i} className="w-10 h-10 rounded-full border-2 border-[#0a0a0a] bg-white/5 flex items-center justify-center overflow-hidden"><img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" /></div>)}
+                               </div>
+                               <p className="text-[10px] font-bold uppercase tracking-widest">+1,240 Professionals Joined</p>
+                            </div>
+                         </div>
+
+                         <div className="relative">
+                            <AnimatePresence mode="wait">
+                               {status === 'success' ? (
+                                  <motion.div 
+                                     key="success" 
+                                     initial={{ opacity: 0, scale: 0.9 }} 
+                                     animate={{ opacity: 1, scale: 1 }} 
+                                     exit={{ opacity: 0, scale: 0.9 }} 
+                                     className="bg-white/5 border border-white/10 rounded-[40px] p-12 text-center space-y-6 backdrop-blur-xl"
+                                  >
+                                     <div className="w-20 h-20 bg-green-500/10 rounded-3xl flex items-center justify-center mx-auto text-green-500 shadow-lg shadow-green-500/20">
+                                        <CheckCircle2 size={40} />
+                                     </div>
+                                     <div className="space-y-2">
+                                        <h3 className="text-3xl font-outfit font-bold text-white">{t('newsletterSuccess')}</h3>
+                                        <p className="text-white/40 text-sm leading-relaxed">{t('newsletterSuccessSub')}</p>
+                                     </div>
+                                  </motion.div>
+                               ) : (
+                                  <motion.div 
+                                     key="form" 
+                                     initial={{ opacity: 0 }} 
+                                     animate={{ opacity: 1 }} 
+                                     exit={{ opacity: 0 }} 
+                                     className="bg-white/5 border border-white/10 rounded-[40px] p-8 md:p-12 backdrop-blur-xl space-y-8"
+                                  >
+                                     <form onSubmit={handleNewsletterSubmit} className="space-y-6">
+                                        <div className="space-y-4">
+                                           <label className="text-[10px] font-mono font-bold text-white/30 uppercase tracking-[0.2em] ml-2">Secure Connection</label>
+                                           <div className="relative group">
+                                              <Mail className="absolute left-6 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-red-800 transition-colors" size={20} />
+                                              <input 
+                                                 type="email" 
+                                                 placeholder={t('newsletterPlaceholder')} 
+                                                 value={email}
+                                                 onChange={(e) => setEmail(e.target.value)}
+                                                 required
+                                                 className="w-full bg-white/5 border border-white/10 rounded-3xl py-6 pl-16 pr-6 text-white focus:bg-white/10 focus:border-red-800 transition-all outline-none text-lg font-outfit"
+                                              />
+                                           </div>
+                                        </div>
+                                        <button 
+                                           disabled={status === 'loading'}
+                                           className="w-full bg-red-800 text-white font-outfit font-black py-6 rounded-3xl hover:bg-red-700 hover:shadow-[0_20px_40px_-10px_rgba(139,0,0,0.5)] active:scale-[0.98] transition-all flex items-center justify-center gap-4 disabled:opacity-50"
+                                        >
+                                           {status === 'loading' ? <Loader2 className="animate-spin" size={24} /> : (
+                                              <>
+                                                 {t('newsletterButton')}
+                                                 <ArrowRight size={20} />
+                                              </>
+                                           )}
+                                        </button>
+                                     </form>
+                                     <p className="text-[9px] text-white/20 text-center uppercase tracking-widest leading-loose">
+                                        By subscribing, you agree to our <br />
+                                        <span className="text-white/40 cursor-pointer hover:text-red-800 transition-colors">Privacy Policy</span> and <span className="text-white/40 cursor-pointer hover:text-red-800 transition-colors">Terms of Service</span>.
+                                     </p>
+                                     {status === 'error' && (
+                                        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="p-4 bg-red-500/10 border border-red-500/20 rounded-2xl text-red-500 text-[10px] font-bold text-center uppercase tracking-widest">
+                                           {t('newsletterError')}
+                                        </motion.div>
+                                     )}
+                                  </motion.div>
+                               )}
+                            </AnimatePresence>
+                         </div>
+                      </div>
+                   </motion.div>
+                </div>
              </section>
 
              <footer className="bg-[#fbf9f5] py-20 px-8 lg:px-24 border-t border-gray-100">
