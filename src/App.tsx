@@ -98,54 +98,54 @@ const T = {
     sidebarMagazine: "Magazine",
     sidebarSettings: "Paramètres",
     sidebarLogout: "Déconnexion",
-    setupIdentity: "Identité",
-    setupBiometrics: "Biométrie",
-    setupDiet: "Diète & Santé",
-    setupBudget: "Budget Mensuel",
-    setupStrategy: "Stratégie",
-    next: "SUIVANT",
-    back: "RETOUR",
-    finalize: "FINALISER ET ENTRER",
-    gender: "Genre",
-    age: "Âge",
-    weight: "Poids (KG)",
-    height: "Taille (CM)",
-    allergies: "Allergies / Intolérances",
-    sugarFree: "Sans Sucre",
-    budgetSub: "Investissement mensuel pour vos entraînements",
-    strategySub: "Objectif final",
-    dashTitle: "Analyse Bio d'Aujourd'hui",
-    dashSub: "Vos données personnalisées pour un état métabolique serein.",
-    targetIntake: "Objectif Calories",
-    protein: "Protéines",
-    carbs: "Glucides",
-    fats: "Lipides",
-    remaining: "RESTANTS",
-    eaten: "Mangés",
-    burned: "Brûlés",
-    aiEngine: "Moteur de Repas IA",
-    mealSug: "Suggestions de Repas",
-    mealSugSub: "Génération automatique d'une journée type.",
-    weeklyPlan: "Plans Hebdomadaires IA",
-    weeklyPlanSub: "Génération de menus complets de 7 jours.",
-    training: "Entraînement",
-    coaches: "Vos Coachs Dédiés",
-    volume: "Volume d'Entraînement",
-    intensity: "Score d'Intensité",
-    preFuel: "Carburant Pré-Entraînement",
-    settingsTitle: "Paramètres Système",
-    settingsSub: "Gérez votre profil biométrique et vos préférences.",
-    profileInfo: "Informations Profil",
-    dietStrat: "Stratégie Alimentaire",
-    resetData: "Réinitialiser les Données",
-    lang: "Langue",
-    privacy: "Politique de Confidentialité",
-    cookies: "Politique de Cookies",
-    terms: "Termes et Conditions",
-    cookieMsg: "Nous utilisons des cookies pour améliorer votre expérience sur SmartEat .Space.",
-    accept: "Tout Accepter",
-    decline: "Refuser",
-    legalIntro: "Dernière mise à jour : Mai 2024. Votre vie privée est notre priorité."
+    00: "Identité",
+    102: "Biométrie",
+    103: "Diète & Santé",
+    104: "Budget Mensuel",
+    105: "Stratégie",
+    106: "SUIVANT",
+    107: "RETOUR",
+    108: "FINALISER ET ENTRER",
+    109: "Genre",
+    110: "Âge",
+    111: "Poids (KG)",
+    112: "Taille (CM)",
+    113: "Allergies / Intolérances",
+    114: "Sans Sucre",
+    115: "Budget Mensuel pour vos entraînements",
+    116: "Objectif final",
+    117: "Analyse Bio d'Aujourd'hui",
+    118: "Vos données personnalisées pour un état métabolique serein.",
+    119: "Objectif Calories",
+    120: "Protéines",
+    121: "Glucides",
+    122: "Lipides",
+    123: "RESTANTS",
+    124: "Mangés",
+    125: "Brûlés",
+    126: "Moteur de Repas IA",
+    127: "Suggestions de Repas",
+    128: "Génération automatique d'une journée type.",
+    129: "Plans Hebdomadaires IA",
+    130: "Génération de menus complets de 7 jours.",
+    131: "Entraînement",
+    132: "Vos Coachs Dédiés",
+    133: "Volume d'Entraînement",
+    134: "Score d'Intensité",
+    135: "Carburant Pré-Entraînement",
+    136: "Paramètres Système",
+    137: "Gérez votre profil biométrique et vos préférences.",
+    138: "Informations Profil",
+    139: "Stratégie Alimentaire",
+    140: "Réinitialiser les Données",
+    141: "Langue",
+    142: "Politique de Confidentialité",
+    143: "Politique de Cookies",
+    144: "Termes et Conditions",
+    145: "Nous utilisons des cookies pour améliorer votre expérience sur SmartEat .Space.",
+    146: "Tout Accepter",
+    147: "Refuser",
+    148: "Dernière mise à jour : Mai 2024. Votre vie privée est notre priorité."
   },
   en: {
     heroTitle: "Fuel Your Body, Transform Your Life",
@@ -161,62 +161,79 @@ const T = {
     sidebarMagazine: "Magazine",
     sidebarSettings: "Settings",
     sidebarLogout: "Logout",
-    setupIdentity: "Identity",
-    setupBiometrics: "Biometrics",
-    setupDiet: "Diet & Health",
-    setupBudget: "Monthly Budget",
-    setupStrategy: "Strategy",
-    next: "NEXT",
-    back: "BACK",
-    finalize: "FINALIZE AND ENTER",
-    gender: "Gender",
-    age: "Age",
-    weight: "Weight (KG)",
-    height: "Height (CM)",
-    allergies: "Allergies / Intolerances",
-    sugarFree: "Sugar-Free",
-    budgetSub: "Monthly fuel investment for your workouts",
-    strategySub: "Ultimate objective",
-    dashTitle: "Today's Bio-Analysis",
-    dashSub: "Your personalized data for a serene metabolic state.",
-    targetIntake: "Target Intake",
-    protein: "Proteins",
-    carbs: "Carbohydrates",
-    fats: "Fats",
-    remaining: "REMAINING",
-    eaten: "Eaten",
-    burned: "Burned",
-    aiEngine: "AI Meal Engine",
-    mealSug: "Meal Suggestions",
-    mealSugSub: "Automatic generation of a typical day.",
-    weeklyPlan: "AI Weekly Plans",
-    weeklyPlanSub: "Generation of entire 7-day menus.",
-    training: "Training",
-    coaches: "Your Dedicated Coaches",
-    volume: "Training Volume",
-    intensity: "Intensity Score",
-    preFuel: "Pre-Workout Fuel",
-    settingsTitle: "System Settings",
-    settingsSub: "Manage your biometric profile and preferences.",
-    profileInfo: "Profile Information",
-    dietStrat: "Dietary Strategy",
-    resetData: "Reset Local Data",
-    lang: "Language",
-    privacy: "Privacy Policy",
-    cookies: "Cookie Policy",
-    terms: "Terms and Conditions",
-    cookieMsg: "We use cookies to enhance your experience on SmartEat .Space.",
-    accept: "Accept All",
-    decline: "Decline",
-    legalIntro: "Last updated: May 2024. Your privacy is our priority."
+    164: "Identity",
+    165: "Biometrics",
+    166: "Diet & Health",
+    167: "Monthly Budget",
+    168: "Strategy",
+    169: "NEXT",
+    170: "BACK",
+    171: "FINALIZE AND ENTER",
+    172: "Gender",
+    173: "Age",
+    174: "Weight (KG)",
+    175: "Height (CM)",
+    176: "Allergies / Intolerances",
+    177: "Sugar-Free",
+    178: "Monthly fuel investment for your workouts",
+    179: "Ultimate objective",
+    180: "Today's Bio-Analysis",
+    181: "Your personalized data for a serene metabolic state.",
+    182: "Target Intake",
+    183: "Proteins",
+    184: "Carbohydrates",
+    185: "Fats",
+    186: "REMAINING",
+    187: "Eaten",
+    188: "Burned",
+    189: "AI Meal Engine",
+    190: "Meal Suggestions",
+    191: "Automatic generation of a typical day.",
+    192: "AI Weekly Plans",
+    193: "Generation of entire 7-day menus.",
+    194: "Training",
+    195: "Your Dedicated Coaches",
+    196: "Training Volume",
+    197: "Intensity Score",
+    198: "Pre-Workout Fuel",
+    199: "System Settings",
+    200: "Manage your biometric profile and preferences.",
+    201: "Profile Information",
+    202: "Dietary Strategy",
+    203: "Reset Local Data",
+    204: "Language",
+    205: "Privacy Policy",
+    206: "Cookie Policy",
+    207: "Terms and Conditions",
+    208: "We use cookies to enhance your experience on SmartEat .Space.",
+    209: "Accept All",
+    210: "Decline",
+    211: "Last updated: May 2024. Your privacy is our priority."
   }
 };
 
 // --- Constants ---
 const EXPERTS = [
-  { name: "Dr. Elena Rossi", role: "Nutritionist", image: "/expert_nutritionist_portrait_1778711792514.png", quotes: { it: "La precisione dell'algoritmo di SmartEat .Space è impareggiabile.", fr: "La précision de l'algorithme de SmartEat .Space est inégalée.", en: "The precision of the SmartEat .Space algorithm is unparalleled." } },
-  { name: "Marcus Vane", role: "Athlete", image: "/expert_athlete_portrait_1778711813674.png", quotes: { it: "Questa piattaforma è il mio copilota per la gestione dell'energia.", fr: "Cette plateforme est mon copilote pour la gestion de l'énergie.", en: "This platform is my co-pilot for energy management." } },
-  { name: "Sarah Jenkins", role: "Coach", image: "/performance_coach_portrait_1778711828845.png", quotes: { it: "La sintesi visiva dei macro è una rivoluzione.", fr: "La synthèse visuelle des macros est une révolution.", en: "The visual synthesis of macros is a revolution." } }
+  { 
+    name: "Coach Ng", 
+    role: "Performance Scientist", 
+    image: "/coach_ng_v2.png", 
+    quotes: { 
+      it: "L'integrazione tra bio-metrica e nutrizione è il futuro dell'atleta d'élite.", 
+      fr: "L'intégration entre biométrie et nutrition est l'avenir de l'athlète d'élite.", 
+      en: "The integration between biometrics and nutrition is the future of the elite athlete." 
+    } 
+  },
+  { 
+    name: "Roberto Rubinelli", 
+    role: "Elite Nutritionist", 
+    image: "/roberto_v2.png", 
+    quotes: { 
+      it: "Il cibo è l'informazione che diamo al nostro DNA. Ottimizzalo.", 
+      fr: "La nourriture est l'information que nous donnons à notre ADN. Optimisez-la.", 
+      en: "Food is the information we give to our DNA. Optimize it." 
+    } 
+  }
 ];
 
 const WEEKLY_DATA = [
@@ -260,7 +277,10 @@ const App = () => {
 
   const results = useMemo(() => calculateCalories(gender, weight, height, age, activity, goal), [gender, weight, height, age, activity, goal]);
 
-  const t = (key: keyof typeof T['it']) => T[lang][key] || T['en'][key];
+  const t = (key: any) => {
+     if (!T[lang]) return T['en'][key] || key;
+     return T[lang][key] || T['en'][key] || key;
+  };
 
   useEffect(() => {
     localStorage.setItem('se_lang', lang);
@@ -289,90 +309,73 @@ const App = () => {
     setShowCookieBanner(false);
   };
 
-  // Sidebar Component
-  const Sidebar = ({ current }: { current: View }) => (
-    <motion.aside 
-      animate={{ width: isSidebarOpen ? 340 : 88 }} 
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="h-screen bg-[#050505] border-r border-white/5 flex flex-col relative z-50 overflow-hidden flex-shrink-0 shadow-2xl"
+  const TopNav = ({ current }: { current: View }) => (
+    <motion.nav 
+      initial={false}
+      animate={{ height: isSidebarOpen ? 'auto' : '80px' }}
+      className="fixed top-0 left-0 right-0 bg-[#050505]/95 backdrop-blur-xl border-b border-white/5 z-50 overflow-hidden shadow-2xl"
     >
-      <div className="h-28 flex items-center justify-center relative">
-        <button 
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)} 
-          className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 ${isSidebarOpen ? 'bg-red-800 text-white rotate-90' : 'bg-white/5 text-white/40 hover:bg-white/10'}`}
-        >
-          {isSidebarOpen ? <X size={22} /> : <Menu size={22} />}
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <button onClick={() => setView('landing')} className="bg-red-800 text-white p-2 px-4 rounded-xl font-outfit font-bold text-lg italic tracking-tighter shadow-lg shadow-red-900/20">
+          SmartEat .Space
         </button>
-      </div>
 
-      <div className="flex flex-col h-full px-4 pb-12">
-        <div className={`mb-12 flex justify-center transition-all duration-500 ${isSidebarOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-90 h-0 overflow-hidden'}`}>
-           <button onClick={() => setView('landing')} className="bg-red-800 text-white p-3 px-5 rounded-2xl font-outfit font-bold text-xl italic tracking-tighter shadow-xl shadow-red-900/20 whitespace-nowrap">
-             SmartEat .Space
+        <div className="flex items-center gap-6">
+           <div className="hidden md:flex items-center gap-2 px-4 py-1.5 bg-white/5 rounded-full border border-white/5">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest">System Live</span>
+           </div>
+           <button 
+             onClick={() => setIsSidebarOpen(!isSidebarOpen)} 
+             className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 ${isSidebarOpen ? 'bg-red-800 text-white' : 'bg-white/5 text-white/40 hover:bg-white/10'}`}
+           >
+             {isSidebarOpen ? <X size={22} /> : <Menu size={22} />}
            </button>
         </div>
-        
-        <nav className="flex-1 space-y-8">
-          <NavItem icon={<Home size={24} />} label={t('sidebarHome')} active={false} isOpen={isSidebarOpen} onClick={() => setView('landing')} />
-          <NavItem icon={<LayoutDashboard size={24} />} label={t('sidebarDash')} active={current === 'dashboard'} isOpen={isSidebarOpen} onClick={() => setView('dashboard')} />
-          <NavItem icon={<Utensils size={24} />} label={t('sidebarMacros')} active={current === 'piano_c'} isOpen={isSidebarOpen} onClick={() => setView('piano_c')} connected />
-          <NavItem icon={<Dumbbell size={24} />} label={t('sidebarWorkouts')} active={current === 'workouts'} isOpen={isSidebarOpen} onClick={() => setView('workouts')} connected />
-          <NavItem icon={<BookOpen size={24} />} label={t('sidebarMagazine')} active={false} isOpen={isSidebarOpen} connected />
-          <NavItem icon={<SettingsIcon size={24} />} label={t('sidebarSettings')} active={current === 'settings'} isOpen={isSidebarOpen} onClick={() => setView('settings')} />
-        </nav>
-
-        <div className="space-y-6 pt-8 border-t border-white/5">
-          {isSidebarOpen ? (
-             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex gap-2 p-2 bg-white/5 rounded-2xl">
-                {['it', 'fr', 'en'].map(l => (
-                   <button key={l} onClick={() => setLang(l as Language)} className={`flex-1 py-2 rounded-xl text-[10px] font-bold uppercase transition-all ${lang === l ? 'bg-red-800 text-white shadow-lg' : 'hover:bg-white/10 text-white/20'}`}>{l}</button>
-                ))}
-             </motion.div>
-          ) : (
-            <div className="flex flex-col items-center gap-2">
-               <div className="w-8 h-8 rounded-full bg-red-800/20 flex items-center justify-center text-[10px] font-bold text-red-800 uppercase">{lang}</div>
-            </div>
-          )}
-
-          <button onClick={() => setView('landing')} className={`w-full flex items-center transition-all group ${isSidebarOpen ? 'px-6 gap-4 text-white/30 hover:text-red-800' : 'justify-center text-white/20 hover:text-red-800'}`}>
-             <LogOut size={24} className="group-hover:scale-110 transition-transform" /> 
-             {isSidebarOpen && <span className="font-bold text-sm uppercase tracking-widest">{t('sidebarLogout')}</span>}
-          </button>
-        </div>
       </div>
-    </motion.aside>
+
+      <AnimatePresence>
+        {isSidebarOpen && (
+          <motion.div 
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -100, opacity: 0 }}
+            className="max-w-7xl mx-auto px-6 pb-12 pt-4"
+          >
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <NavItem icon={<Home size={20} />} label={t('sidebarHome')} active={false} onClick={() => { setView('landing'); setIsSidebarOpen(false); }} />
+              <NavItem icon={<LayoutDashboard size={20} />} label={t('sidebarDash')} active={current === 'dashboard'} onClick={() => { setView('dashboard'); setIsSidebarOpen(false); }} />
+              <NavItem icon={<Utensils size={20} />} label={t('sidebarMacros')} active={current === 'piano_c'} onClick={() => { setView('piano_c'); setIsSidebarOpen(false); }} connected />
+              <NavItem icon={<Dumbbell size={20} />} label={t('sidebarWorkouts')} active={current === 'workouts'} onClick={() => { setView('workouts'); setIsSidebarOpen(false); }} connected />
+              <NavItem icon={<BookOpen size={20} />} label={t('sidebarMagazine')} active={false} onClick={() => setIsSidebarOpen(false)} connected />
+              <NavItem icon={<SettingsIcon size={20} />} label={t('sidebarSettings')} active={current === 'settings'} onClick={() => { setView('settings'); setIsSidebarOpen(false); }} />
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+               <div className="flex gap-2 p-1.5 bg-white/5 rounded-2xl w-full md:w-64">
+                  {['it', 'fr', 'en'].map(l => (
+                     <button key={l} onClick={() => setLang(l as Language)} className={`flex-1 py-2 rounded-xl text-[10px] font-bold uppercase transition-all ${lang === l ? 'bg-red-800 text-white shadow-lg' : 'hover:bg-white/10 text-white/20'}`}>{l}</button>
+                  ))}
+               </div>
+               <button onClick={() => { setView('landing'); setIsSidebarOpen(false); }} className="flex items-center gap-3 text-white/30 hover:text-red-800 transition-all font-bold text-sm uppercase tracking-widest">
+                  <LogOut size={20} /> {t('sidebarLogout')}
+               </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 
-  const NavItem = ({ icon, label, active, isOpen, onClick, connected }: any) => (
-    <div className="relative px-2">
-      {connected && isOpen && (
-        <motion.div 
-          initial={{ opacity: 0, y: 5 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-[8px] text-white font-black px-2 py-0.5 rounded-full uppercase tracking-tighter z-10 shadow-lg"
-        >
-          Connected
-        </motion.div>
-      )}
-      <button 
-        onClick={onClick} 
-        className={`w-full h-16 rounded-[24px] flex items-center transition-all duration-300 relative group ${isOpen ? 'px-6 gap-6' : 'justify-center'} ${active ? 'bg-red-800 text-white shadow-2xl shadow-red-900/50' : 'bg-transparent text-white/40 hover:bg-white/5 hover:text-white'}`}
-      >
-        <div className={`flex-shrink-0 transition-transform duration-300 ${active ? 'scale-110' : 'group-hover:scale-110'}`}>
-          {icon}
-        </div>
-        {isOpen && (
-          <motion.span 
-            initial={{ opacity: 0, x: -10 }} 
-            animate={{ opacity: 1, x: 0 }} 
-            className="font-outfit font-bold whitespace-nowrap text-sm tracking-tight"
-          >
-            {label}
-          </motion.span>
-        )}
-        {!isOpen && active && <div className="absolute right-0 w-1.5 h-6 bg-red-800 rounded-l-full" />}
-      </button>
-    </div>
+  const NavItem = ({ icon, label, active, onClick, connected }: any) => (
+    <button 
+      onClick={onClick} 
+      className={`relative group p-6 rounded-[32px] border transition-all duration-300 flex flex-col items-center gap-4 ${active ? 'bg-red-800 border-red-800 text-white shadow-xl shadow-red-900/20' : 'bg-white/5 border-white/5 text-white/40 hover:bg-white/10 hover:text-white'}`}
+    >
+      {connected && <div className="absolute top-2 right-4 bg-blue-600 text-[7px] text-white font-black px-1.5 py-0.5 rounded-full uppercase tracking-tighter shadow-lg">Connected</div>}
+      <div className={`transition-transform duration-300 ${active ? 'scale-110' : 'group-hover:scale-110'}`}>{icon}</div>
+      <span className="font-outfit font-bold text-xs uppercase tracking-widest">{label}</span>
+    </button>
   );
 
   const LegalPage = ({ title, icon, content }: any) => (
@@ -392,7 +395,7 @@ const App = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-gray-100 font-inter flex overflow-hidden">
+    <div className="min-h-screen bg-[#0a0a0a] text-gray-100 font-inter flex flex-col overflow-x-hidden">
       <AnimatePresence>
         {showCookieBanner && (
           <motion.div initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 100, opacity: 0 }} className="fixed bottom-8 left-8 right-8 md:left-auto md:right-8 md:w-96 bg-white rounded-3xl p-8 shadow-2xl z-[100] border border-gray-100">
@@ -447,10 +450,10 @@ const App = () => {
                    <h2 className="text-4xl lg:text-6xl font-outfit font-bold text-white">{t('trustedBy')}</h2>
                    <p className="text-white/40 max-w-2xl mx-auto text-lg">{t('expertSub')}</p>
                  </div>
-                 <div className="grid md:grid-cols-3 gap-12">
+                 <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
                    {EXPERTS.map((expert, idx) => (
                      <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }} className="bg-white/5 rounded-3xl p-10 space-y-8 border border-white/5 hover:border-white/10 transition-colors">
-                       <img src={expert.image} alt={expert.name} className="w-24 h-24 rounded-2xl grayscale hover:grayscale-0 transition-all duration-500" />
+                       <img src={expert.image} alt={expert.name} className="w-24 h-24 rounded-2xl transition-all duration-500 object-cover" />
                        <p className="text-white/60 italic text-lg leading-relaxed">"{expert.quotes[lang]}"</p>
                        <div>
                          <p className="font-bold text-white text-xl">{expert.name}</p>
@@ -669,10 +672,10 @@ const App = () => {
            </motion.div>
         )}
 
-        {/* DASHBOARD VIEW STACK */}
+        {/* DASHBOARD / APP VIEW STACK (With Top Nav) */}
         {(view === 'dashboard' || view === 'piano_c' || view === 'workouts' || view === 'settings') && (
-           <motion.div key="app-stack" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex w-full overflow-hidden">
-              <Sidebar current={view} />
+           <motion.div key="app-stack" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 flex flex-col pt-20">
+              <TopNav current={view} />
               
               <div className="flex-1 overflow-y-auto bg-[#0a0a0a]">
                 {view === 'dashboard' && (
@@ -739,24 +742,24 @@ const App = () => {
                   </motion.main>
                 )}
                 {view === 'workouts' && (
-                  <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex-1 bg-white flex flex-col h-full min-h-screen">
+                  <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex-1 bg-[#0a0a0a] flex flex-col h-full min-h-[calc(100vh-80px)]">
                     <div className="p-8 lg:p-12 space-y-12 max-w-7xl mx-auto w-full">
-                       <header><h1 className="text-5xl font-outfit font-bold text-red-800">{t('training')}</h1></header>
+                       <header><h1 className="text-6xl font-outfit font-bold text-white tracking-tight">{t('training').split(' ')[0]} <span className="text-red-800 italic">{t('training').split(' ')[1] || ''}</span></h1></header>
                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                           <div className="lg:col-span-2 space-y-12">
                              <section className="space-y-8">
-                                <h2 className="text-2xl font-outfit font-bold text-gray-800 flex items-center gap-2">{t('coaches')}</h2>
+                                <h2 className="text-2xl font-outfit font-bold text-white/40 flex items-center gap-2">{t('coaches')}</h2>
                                 <div className="grid md:grid-cols-2 gap-8">
                                    {[
-                                      { name: "Coach Ng", image: "/coach_ng_fitness_expert_1778769794838.png", bio: { it: "Specialista in ipertrofia e ottimizzazione metabolica. Programmi personalizzati.", fr: "Spécialiste de l'hypertrophie et de l'optimisation métabolique. Programmes personnalisés.", en: "Specialist in hypertrophy and metabolic optimization. Personalized programs." } },
-                                      { name: "Roberto Rubinelli", image: "/roberto_rubinelli_coach_1778769816010.png", bio: { it: "Esperto in nutrizione sportiva e performance atletica d'élite. Focus su biohacking.", fr: "Expert en nutrition sportive et performance athlétique d'élite. Focus sur le biohacking.", en: "Expert in sports nutrition and elite athletic performance. Focus on biohacking." } }
+                                      { name: "Coach Ng", image: "/coach_ng_v2.png", bio: { it: "Specialista in ipertrofia e ottimizzazione metabolica. Programmi personalizzati.", fr: "Spécialiste de l'hypertrophie et de l'optimisation métabolique. Programmes personnalisés.", en: "Specialist in hypertrophy and metabolic optimization. Personalized programs." } },
+                                      { name: "Roberto Rubinelli", image: "/roberto_v2.png", bio: { it: "Esperto in nutrizione sportiva e performance atletica d'élite. Focus su biohacking.", fr: "Expert en nutrition sportive et performance athlétique d'élite. Focus sur le biohacking.", en: "Expert in sports nutrition and elite athletic performance. Focus on biohacking." } }
                                    ].map((c, i) => (
-                                      <div key={i} className="bg-white rounded-[32px] overflow-hidden shadow-xl shadow-gray-200/50 border border-gray-100 flex flex-col h-full">
-                                         <div className="h-72 overflow-hidden bg-gray-100"><img src={c.image} alt={c.name} className="w-full h-full object-cover hover:scale-105 transition-all duration-700" /></div>
+                                      <div key={i} className="bg-white/5 rounded-[32px] overflow-hidden shadow-2xl border border-white/5 flex flex-col h-full">
+                                         <div className="h-72 overflow-hidden bg-white/5"><img src={c.image} alt={c.name} className="w-full h-full object-cover hover:scale-105 transition-all duration-700" /></div>
                                          <div className="p-8 space-y-6 flex-1 flex flex-col">
-                                            <h3 className="text-2xl font-outfit font-bold text-gray-900">{c.name}</h3>
-                                            <p className="text-gray-500 text-sm leading-relaxed flex-1">{c.bio[lang]}</p>
-                                            <div className="flex gap-4 pt-4"><button className={`flex-1 py-3 rounded-xl font-bold text-sm ${i === 0 ? 'bg-red-800 text-white shadow-lg shadow-red-900/20' : 'border-2 border-red-800 text-red-800'}`}>Contact</button></div>
+                                            <h3 className="text-2xl font-outfit font-bold text-white">{c.name}</h3>
+                                            <p className="text-white/40 text-sm leading-relaxed flex-1">{c.bio[lang]}</p>
+                                            <div className="flex gap-4 pt-4"><button className={`flex-1 py-3 rounded-xl font-bold text-sm ${i === 0 ? 'bg-red-800 text-white shadow-lg shadow-red-900/20' : 'border-2 border-red-800 text-red-800 hover:bg-red-800 hover:text-white transition-all'}`}>Contact</button></div>
                                          </div>
                                       </div>
                                    ))}
@@ -764,12 +767,12 @@ const App = () => {
                              </section>
                           </div>
                           <div className="space-y-8">
-                             <div className="bg-white rounded-3xl p-8 shadow-xl shadow-gray-200/50 border border-gray-50 space-y-6"><div className="flex items-center gap-2 text-red-800 text-[10px] font-bold uppercase tracking-[0.2em]"><TrendingUp size={14}/> {t('volume')}</div><div className="space-y-1"><h3 className="text-4xl font-outfit font-bold text-gray-900">12,450 <span className="text-sm font-normal text-gray-400 italic">kg / week</span></h3><p className="text-green-600 text-[10px] font-bold">+12%</p></div><div className="h-32"><ResponsiveContainer width="100%" height="100%"><BarChart data={TRAINING_DATA}><Bar dataKey="val" radius={[4, 4, 0, 0]} fill="#8B0000" /></BarChart></ResponsiveContainer></div></div>
-                             <div className="bg-white rounded-3xl p-8 shadow-xl shadow-gray-200/50 border border-gray-50 space-y-8"><div className="flex items-center gap-2 text-red-800 text-[10px] font-bold uppercase tracking-[0.2em]"><Zap size={14}/> {t('intensity')}</div><div className="flex flex-col items-center justify-center py-4 relative"><div className="w-32 h-32 rounded-full border-[10px] border-gray-100 flex items-center justify-center relative"><div className="absolute inset-0 rounded-full border-[10px] border-red-800 border-t-transparent -rotate-45" /><div className="text-center"><p className="text-3xl font-outfit font-bold text-gray-900">8.5</p><p className="text-[8px] text-gray-400 font-bold uppercase">RPE AVG</p></div></div></div></div>
+                             <div className="bg-white/5 rounded-3xl p-8 border border-white/5 space-y-6"><div className="flex items-center gap-2 text-red-800 text-[10px] font-bold uppercase tracking-[0.2em]"><TrendingUp size={14}/> {t('volume')}</div><div className="space-y-1"><h3 className="text-4xl font-outfit font-bold text-white">12,450 <span className="text-sm font-normal text-white/20 italic">kg / week</span></h3><p className="text-green-500 text-[10px] font-bold">+12%</p></div><div className="h-32"><ResponsiveContainer width="100%" height="100%"><BarChart data={TRAINING_DATA}><Bar dataKey="val" radius={[4, 4, 0, 0]} fill="#8B0000" /></BarChart></ResponsiveContainer></div></div>
+                             <div className="bg-white/5 rounded-3xl p-8 border border-white/5 space-y-8"><div className="flex items-center gap-2 text-red-800 text-[10px] font-bold uppercase tracking-[0.2em]"><Zap size={14}/> {t('intensity')}</div><div className="flex flex-col items-center justify-center py-4 relative"><div className="w-32 h-32 rounded-full border-[10px] border-white/5 flex items-center justify-center relative"><div className="absolute inset-0 rounded-full border-[10px] border-red-800 border-t-transparent -rotate-45" /><div className="text-center"><p className="text-3xl font-outfit font-bold text-white">8.5</p><p className="text-[8px] text-white/40 font-bold uppercase">RPE AVG</p></div></div></div></div>
                              <div className="bg-red-800 rounded-3xl p-8 shadow-2xl shadow-red-900/30 text-white space-y-6 relative overflow-hidden"><div className="absolute -right-4 -top-4 opacity-10 rotate-12"><Flame size={120}/></div><div className="space-y-4 relative z-10"><h4 className="text-2xl font-outfit font-bold">{t('preFuel')}</h4><p className="text-white/60 text-xs leading-relaxed">Scientific recommendations.</p><div className="bg-black/20 rounded-2xl p-4 flex justify-between items-center group cursor-pointer hover:bg-black/30 transition-all border border-white/10"><div className="flex items-center gap-3"><Utensils size={18}/><span className="text-[10px] font-bold uppercase tracking-widest">30g Protein / 50g Carbs</span></div><ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" /></div></div></div>
                           </div>
                        </div>
-                       <footer className="pt-20 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8 pb-12"><div className="font-outfit font-bold text-red-800 text-xl italic tracking-tight">SmartEat .Space</div><div className="flex gap-8 text-[10px] font-bold text-gray-400 uppercase tracking-widest"><button onClick={() => setView('privacy')} className="hover:text-red-800 transition-colors">{t('privacy')}</button><button onClick={() => setView('cookies')} className="hover:text-red-800 transition-colors">{t('cookies')}</button><button onClick={() => setView('terms')} className="hover:text-red-800 transition-colors">{t('terms')}</button></div><p className="text-[10px] text-gray-300 font-medium">© 2024 SmartEat .Space. Premium Personalized Nutrition.</p></footer>
+                       <footer className="pt-20 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 pb-12"><div className="font-outfit font-bold text-white text-xl italic tracking-tight">SmartEat .Space</div><div className="flex gap-8 text-[10px] font-bold text-white/40 uppercase tracking-widest"><button onClick={() => setView('privacy')} className="hover:text-red-800 transition-colors">{t('privacy')}</button><button onClick={() => setView('cookies')} className="hover:text-red-800 transition-colors">{t('cookies')}</button><button onClick={() => setView('terms')} className="hover:text-red-800 transition-colors">{t('terms')}</button></div><p className="text-[10px] text-white/20 font-medium">© 2024 SmartEat .Space. Premium Personalized Nutrition.</p></footer>
                     </div>
                   </motion.main>
                 )}
