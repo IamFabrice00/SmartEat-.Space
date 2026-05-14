@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ChevronRight, Save, ArrowLeft, Loader2, ShieldCheck, Trophy, Star, Quote, Lock, User as UserIcon, Eye, EyeOff,
   LayoutDashboard, Utensils, Dumbbell, Bell, Settings as SettingsIcon, LogOut, Menu, X, Flame, TrendingUp, Zap, Clock, Calendar, 
-  CheckCircle2, Plus, Search, BookOpen, Coffee, Pizza, Info, ArrowRight, ChevronLeft, Home, Sparkles, Brain, Wand2,
-  Mail, ExternalLink, Leaf, AlertCircle, Coins, CreditCard, BellRing, UserCircle, Globe, ShieldAlert, FileText, Fingerprint
+  Plus, Search, BookOpen, Pizza, ArrowRight, Home, Sparkles, Brain, Wand2,
+  Leaf, AlertCircle, Coins, UserCircle, Globe, ShieldAlert, FileText, Fingerprint
 } from 'lucide-react';
 import { 
   PieChart, Pie, Cell, ResponsiveContainer, 
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, BarChart, Bar
+  AreaChart, Area, XAxis, CartesianGrid, Tooltip, BarChart, Bar
 } from 'recharts';
 
 // --- Types ---
@@ -248,7 +248,7 @@ const App = () => {
   const [weight, setWeight] = useState(() => Number(localStorage.getItem('se_weight')) || 75);
   const [height, setHeight] = useState(() => Number(localStorage.getItem('se_height')) || 180);
   const [age, setAge] = useState(() => Number(localStorage.getItem('se_age')) || 25);
-  const [activity, setActivity] = useState<ActivityLevel>(() => Number(localStorage.getItem('se_activity')) as ActivityLevel || 1.2);
+  const [activity] = useState<ActivityLevel>(() => Number(localStorage.getItem('se_activity')) as ActivityLevel || 1.2);
   const [goal, setGoal] = useState<Goal>(() => (localStorage.getItem('se_goal') as Goal) || 'maintain');
   const [diet, setDiet] = useState<DietType>(() => (localStorage.getItem('se_diet') as DietType) || 'omnivore');
   const [allergies, setAllergies] = useState(() => localStorage.getItem('se_allergies') || '');
@@ -691,7 +691,7 @@ const App = () => {
                            <div className="bg-white/5 border border-white/5 rounded-[32px] p-8 flex flex-col md:flex-row gap-8 hover:bg-white/10 transition-all group relative overflow-hidden"><div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><Calendar size={120} className="text-red-800" /></div><div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-blue-900/40 flex-shrink-0"><Sparkles size={32}/></div><div className="space-y-4 flex-1 relative z-10"><h4 className="text-2xl font-outfit font-bold text-white italic">{t('weeklyPlan')}</h4><p className="text-white/40 text-sm leading-relaxed">{t('weeklyPlanSub')}</p><button className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-6 py-3 rounded-xl shadow-lg shadow-blue-900/40 transition-all uppercase tracking-widest">Build 7-Day Menu</button></div></div>
                         </div>
                         <div className="space-y-6">
-                           <div className="bg-white/5 border border-white/5 rounded-3xl p-8 space-y-6"><p className="text-[10px] text-white/30 font-bold uppercase tracking-widest text-center">WEEKLY PROTEIN TREND</p><div className="h-40"><ResponsiveContainer width="100%" height="100%"><BarChart data={WEEKLY_DATA}><Bar dataKey="val" radius={[4, 4, 0, 0]}>{WEEKLY_DATA.map((entry, index) => (<Cell key={index} fill={index === 4 ? '#8B0000' : 'rgba(210, 105, 30, 0.4)'} />))}</Bar><XAxis dataKey="day" axisLine={false} tickLine={false} tick={{fill: 'rgba(255,255,255,0.2)', fontSize: 10}} /></BarChart></ResponsiveContainer></div></div>
+                           <div className="bg-white/5 border border-white/5 rounded-3xl p-8 space-y-6"><p className="text-[10px] text-white/30 font-bold uppercase tracking-widest text-center">WEEKLY PROTEIN TREND</p><div className="h-40"><ResponsiveContainer width="100%" height="100%"><BarChart data={WEEKLY_DATA}><Bar dataKey="val" radius={[4, 4, 0, 0]}>{WEEKLY_DATA.map((_, index) => (<Cell key={index} fill={index === 4 ? '#8B0000' : 'rgba(210, 105, 30, 0.4)'} />))}</Bar><XAxis dataKey="day" axisLine={false} tickLine={false} tick={{fill: 'rgba(255,255,255,0.2)', fontSize: 10}} /></BarChart></ResponsiveContainer></div></div>
                            <div className="bg-red-900/60 border border-red-800/50 rounded-3xl p-8 space-y-6 relative overflow-hidden group"><div className="space-y-4 relative z-10"><div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white"><Star size={14}/></div><h4 className="text-xl font-outfit font-bold italic">Science of Protein</h4><p className="text-xs text-white/60 leading-relaxed italic">"Consuming 20-30g of protein during breakfast helps stabilize blood sugar."</p><button className="flex items-center gap-2 text-[10px] font-bold text-white hover:gap-4 transition-all uppercase tracking-widest">Read the study <ArrowRight size={14}/></button></div></div>
                         </div>
                      </div>
